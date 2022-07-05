@@ -8,7 +8,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <Routes>
-            <Route path='*' element={<Greetings />} />
+            <Route path="*" element={<Greetings />} />
           </Routes>
         </header>
       </div>

@@ -1,6 +1,13 @@
-import CONFIG from '../../config.json'
+import CONFIG from '../../config.json';
 
 const GREETING_FETCHED = 'helloReactFrontEnd/greeting/FETCHED';
+
+const greetingFetchd = (greeting) => ({
+  type: GREETING_FETCHED,
+  payload: {
+    greeting,
+  },
+});
 
 export const fetchGreeting = () => (dispatch) => {
   fetch(CONFIG.API_URL)
@@ -8,14 +15,7 @@ export const fetchGreeting = () => (dispatch) => {
     .then((res) => {
       dispatch(greetingFetchd(res.data));
     });
-}
-
-const greetingFetchd = (greeting) => ({
-  type: GREETING_FETCHED,
-  payload: {
-    greeting
-  },
-});
+};
 
 export default function reducer(state = '', action) {
   switch (action.type) {
