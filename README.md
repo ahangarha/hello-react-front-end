@@ -8,7 +8,7 @@ An educational React app to connect to API and show random greeting
 ## Setup and usage
 - Clone the project
 - Go to the project directory and install dependencies by running `npm install`
-- Open `src/config.json` and set the API url
+- Copy `src/config.json.example` to `src/config.json` and set the API url
 - Run the app by `npm start`
 
 ## Author
